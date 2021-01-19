@@ -4,45 +4,30 @@
 
     <div class="section">
       <h2>Show the Accounts</h2>
-      <drizzle-account units="Ether" :precision="2" />
+      <drizzle-account :accountIndex="0" units="Ether" :precision="2" />
     </div>
 
-    <!-- <div class="section">
-      <h2>Tutorial Token</h2>
-      <TutorialToken />
-    </div> -->
-
     <div class="section">
-      <h2>Simple Storage</h2>
-      <SimpleStorage />
+      <SplitPayment />
     </div>
 
     <div class="section">
       <Toast />
     </div>
-
-    <!-- <div class="section">
-      <h2>Complex Storage</h2>
-      <ComplexStorage />
-    </div> -->
   </div>
 
   <div v-else>Loading...</div>
 </template>
 
 <script>
-// import TutorialToken from "./TutorialToken";
-// import ComplexStorage from "./ComplexStorage";
-import SimpleStorage from "./SimpleStorage";
+import SplitPayment from "./SplitPayment";
 import Toast from "./Toast";
 import { mapGetters } from "vuex";
 
 export default {
   name: "app",
   components: {
-    // ComplexStorage,
-    // TutorialToken,
-    SimpleStorage,
+    SplitPayment,
     Toast,
   },
 
